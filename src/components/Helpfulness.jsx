@@ -33,6 +33,10 @@ const Helpfulness = () => {
       title: 'Эвакуация автомобиля',
       img: 'https://sankt-peterburg.avariynyy-komissar.ru/templates/autokom/images/screen5_icon_7.png',
     },
+    {
+      title: 'Эвакуация автомобиля1',
+      img: 'https://sankt-peterburg.avariynyy-komissar.ru/templates/autokom/images/screen5_icon_7.png',
+    },
   ];
 
   const advantagesEl = helpfulness.map((item) => (
@@ -42,7 +46,7 @@ const Helpfulness = () => {
   return (
     <div className="container mx-auto flex flex-wrap flex-col justify-center grow text-center py-16">
       <h2 className="text-4xl py-3">{title}</h2>
-      <div className="grid md:grid-cols-3 mt-6 gap-x-2 gap-y-4">
+      <div className="grid md:grid-cols-4 mt-6 gap-x-2 gap-y-8">
         {advantagesEl}
       </div>
       <div className="flex flex-wrap justify-center mt-12">
