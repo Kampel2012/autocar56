@@ -16,7 +16,7 @@ const Header = ({ scrollToRef, myRef }) => {
   return (
     <div className="text-center bg-black bg-opacity-30 h-24 fixed w-full text-white">
       <div className="container mx-auto flex flex-wrap justify-between h-full items-center px-4">
-        <img className="h-24" src={Logo} />
+        <img className="h-24" src={Logo} onClick={() => scrollTo(top)} />
         <div className="text-lg font-semibold gap-x-5 flex-wrap hidden md:flex">
           <Nav links={linksHeader} scrollToRef={scrollToRef} myRef={myRef} />
         </div>
