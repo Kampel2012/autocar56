@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import Nav from './UI/Nav';
 import PositionedMenu from './UI/PositionedMenu';
+import Logo from '../assets/logo.png';
 
 const Header = ({ scrollToRef, myRef }) => {
-  const headerTitle = 'АВТОКОМ56 ЛОГО';
   const headerPhone = '97-90-50';
 
   const linksHeader = [
@@ -16,11 +16,11 @@ const Header = ({ scrollToRef, myRef }) => {
   return (
     <div className="text-center bg-black bg-opacity-30 h-24 fixed w-full text-white">
       <div className="container mx-auto flex flex-wrap justify-between h-full items-center px-4">
-        <h1 className="mr-1">{headerTitle}</h1>
+        <img className="h-24" src={Logo} />
         <div className="text-lg font-semibold gap-x-5 flex-wrap hidden md:flex">
           <Nav links={linksHeader} scrollToRef={scrollToRef} myRef={myRef} />
         </div>
-        <p className="self-center text-lg">{headerPhone}</p>
+        <p className="self-center text-xl">{headerPhone}</p>
         <div className="md:hidden">
           <PositionedMenu
             linksHeader={linksHeader}
