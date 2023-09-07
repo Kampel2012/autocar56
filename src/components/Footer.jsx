@@ -10,6 +10,18 @@ const Footer = ({ scrollToRef, myRef }) => {
         <Nav scrollToRef={scrollToRef} myRef={myRef} />
       </div>
       <div className="text-lg font-bold">97-90-50</div>
+
+      <a
+        href="https://metrika.yandex.ru/stat/?id=94864708&amp;from=informer"
+        target="_blank"
+        rel="nofollow noreferrer">
+        <img
+          src="https://informer.yandex.ru/informer/94864708/1_0_FFFFFFFF_FFFFFFFF_0_visits"
+          className="w-20 h-4 border-none"
+          alt="Яндекс.Метрика"
+          title="Яндекс.Метрика: данные за сегодня (визиты)"
+        />
+      </a>
     </div>
   );
 };
