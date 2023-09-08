@@ -1,17 +1,20 @@
 import Nav from './UI/Nav';
 import PropTypes from 'prop-types';
-import Logo from '../assets/logo.png';
+/* import Logo from '../assets/logo.png'; */
 
 const Footer = ({ scrollToRef, myRef }) => {
+  const year = new Date().getFullYear();
+
   return (
     <div className="h-20 container mx-auto flex flex-wrap justify-between items-center text-white px-3">
-      <img className="h-20" src={Logo} />
+      {/* <img className="h-20" src={Logo} /> */}
+      <p>© {year}</p>
       <div className="md:block hidden">
         <Nav scrollToRef={scrollToRef} myRef={myRef} />
       </div>
       <div className="text-lg font-bold">97-90-50</div>
 
-      <a
+      {/*       <a
         href="https://metrika.yandex.ru/stat/?id=94864708&amp;from=informer"
         target="_blank"
         rel="nofollow noreferrer">
@@ -21,7 +24,7 @@ const Footer = ({ scrollToRef, myRef }) => {
           alt="Яндекс.Метрика"
           title="Яндекс.Метрика: данные за сегодня (визиты)"
         />
-      </a>
+      </a> */}
     </div>
   );
 };
