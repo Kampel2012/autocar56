@@ -12,7 +12,8 @@ const Contacts = () => {
     <div className="text-center text-black flex flex-wrap flex-col justify-center container mx-auto pt-16">
       <h2 className="pb-10 text-3xl">{contacts.title}</h2>
       <div>{contacts.adress}</div>
-      <div>{`${contacts.phone} E-mail: ${contacts.email}`}</div>
+      <div>{`${contacts.phone}`}</div>
+      <div>{`E-mail: ${contacts.email}`}</div>
       <div>{contacts.discription}</div>
       <div className="mx-auto mt-10 container">
         <iframe
