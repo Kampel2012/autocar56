@@ -1,7 +1,7 @@
 const Contacts = () => {
   const contacts = {
     title: 'Контакты аварийного комиссара в Оренбурге',
-    adress: 'Авторемонтная, д. 13/1, каб. 201 ',
+    adress: 'ул. Авторемонтная, д. 13/1, каб. 201 ',
     adressDiscription: '(2 этаж вход с левого торца)',
     phoneFirst: '+ 7 (3532) 97-90-50',
     phoneSecond: '+ 7-987-847-90-50',
@@ -15,8 +15,12 @@ const Contacts = () => {
       <h2 className="pb-10 text-3xl">{contacts.title}</h2>
       <div>{contacts.adress}</div>
       <div>{contacts.adressDiscription}</div>
-      <div className="font-semibold">{`${contacts.phoneFirst}`}</div>
-      <div className="font-semibold">{`${contacts.phoneSecond}`}</div>
+      <div>
+        тел. <span className="font-semibold">{contacts.phoneFirst}</span>
+      </div>
+      <div>
+        тел. <span className="font-semibold">{contacts.phoneSecond}</span>
+      </div>
       <div>
         E-mail: <span className="font-semibold">{contacts.email}</span>
       </div>
