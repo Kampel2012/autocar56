@@ -1,8 +1,10 @@
 const Contacts = () => {
   const contacts = {
     title: 'Контакты аварийного комиссара в Оренбурге',
-    adress: 'Авторемонтная 13 а, 201 каб. (2 этаж вход с левого торца)',
-    phone: '+ 7 (3532) 97-90-50 +7-98-78-47-90-50',
+    adress: 'Авторемонтная, д. 13/1, каб. 201 ',
+    adressDiscription: '(2 этаж вход с левого торца)',
+    phoneFirst: '+ 7 (3532) 97-90-50',
+    phoneSecond: '+ 7-987-847-90-50',
     email: 'ruslan11dec@mail.ru',
     discription:
       'Компания предлагает своим клиентам услугу выезда аварийных комиссаров на место ДТП в Оренбурге',
@@ -12,8 +14,12 @@ const Contacts = () => {
     <div className="text-center text-black flex flex-wrap flex-col justify-center container mx-auto pt-16">
       <h2 className="pb-10 text-3xl">{contacts.title}</h2>
       <div>{contacts.adress}</div>
-      <div>{`${contacts.phone}`}</div>
-      <div>{`E-mail: ${contacts.email}`}</div>
+      <div>{contacts.adressDiscription}</div>
+      <div className="font-semibold">{`${contacts.phoneFirst}`}</div>
+      <div className="font-semibold">{`${contacts.phoneSecond}`}</div>
+      <div>
+        E-mail: <span className="font-semibold">{contacts.email}</span>
+      </div>
       <div>{contacts.discription}</div>
       <div className="mx-auto mt-10 container">
         <iframe
