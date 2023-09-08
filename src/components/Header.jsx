@@ -15,7 +15,7 @@ const Header = ({ scrollToRef, myRef }) => {
 
   return (
     <div className="text-center bg-[#5B5B5B] bg-opacity-80 h-[70px] md:h-24 fixed w-full text-white">
-      <div className="container mx-auto flex flex-wrap justify-between h-full items-center px-4">
+      <div className="container mx-auto flex flex-wrap justify-between h-full items-center px-1 md:px-4">
         <img
           className="h-[70px] md:h-24"
           src={Logo}
