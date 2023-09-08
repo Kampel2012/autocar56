@@ -36,8 +36,8 @@ const Helpfulness = () => {
       img: 'https://sankt-peterburg.avariynyy-komissar.ru/templates/autokom/images/screen5_icon_7.png',
     },
     {
-      title: 'Эвакуация автомобиля1',
-      img: 'https://sankt-peterburg.avariynyy-komissar.ru/templates/autokom/images/screen5_icon_7.png',
+      title: 'Решение ваших проблем берем на себя',
+      img: 'https://i.ibb.co/L6YM7b1/image8.png',
     },
   ];
 

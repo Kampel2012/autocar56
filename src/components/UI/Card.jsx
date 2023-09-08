@@ -6,7 +6,6 @@ export const Card = forwardRef(({ item, size = '176px' }, ref) => {
   return (
     <div ref={ref} className="flex flex-wrap justify-center gap-y-2 self-start">
       <img
-        className=""
         style={{ width: size, height: size }}
         src={item.img}
         alt={item.title}
