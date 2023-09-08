@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+import { textAnimation } from '../components/animations/animations';
+
 const OurServices = () => {
   const title = 'Какие услуги оказывает аварийный комиссар';
 
@@ -16,16 +19,24 @@ const OurServices = () => {
   ];
 
   return (
-    <div className="text-black container mx-auto flex flex-wrap flex-col justify-center grow text-center py-10">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      className="text-black container mx-auto flex flex-wrap flex-col justify-center grow text-center py-10">
       <h1 className="mb-10 text-3xl">{title}</h1>
       <ul className="text-left">
-        {services.map((item) => (
-          <li className="text-xl border-b m-3 font-medium px-2 pb-2" key={item}>
+        {services.map((item, i) => (
+          <motion.li
+            custom={i + 1}
+            variants={textAnimation}
+            className="text-xl border-b m-3 font-medium px-2 pb-2"
+            key={item}>
             {item}
-          </li>
+          </motion.li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

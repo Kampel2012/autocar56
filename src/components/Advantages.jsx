@@ -1,5 +1,7 @@
 import ButtonCallCom from './UI/ButtonCallCom';
-import Card from './UI/Card';
+import { MCard } from './UI/Card';
+import { motion } from 'framer-motion';
+import { imageAnimation } from '../components/animations/animations';
 
 const Advantages = () => {
   const title = 'Основные достоинства аварийного комиссара';
@@ -31,20 +33,33 @@ const Advantages = () => {
     },
   ];
 
-  const advantagesEl = advantages.map((item) => (
-    <Card item={item} key={item.title} size="140px" />
+  const advantagesEl = advantages.map((item, i) => (
+    <MCard
+      custom={i + 1}
+      variants={imageAnimation}
+      item={item}
+      key={item.title}
+      size="140px"
+    />
   ));
 
   return (
-    <div className="container mx-auto flex flex-wrap flex-col justify-center grow text-center">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.3, once: true }}
+      className="container mx-auto flex flex-wrap flex-col justify-center grow text-center">
       <h2 className="text-4xl py-3">{title}</h2>
       <div className="grid md:grid-cols-3 mt-6 gap-x-2 gap-y-2">
         {advantagesEl}
       </div>
-      <div className="flex flex-wrap justify-center my-12">
+      <motion.div
+        custom={7}
+        variants={imageAnimation}
+        className="flex flex-wrap justify-center my-12">
         <ButtonCallCom />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

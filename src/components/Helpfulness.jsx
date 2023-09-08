@@ -1,5 +1,7 @@
 import ButtonCallCom from './UI/ButtonCallCom';
-import Card from './UI/Card';
+import { MCard } from './UI/Card';
+import { motion } from 'framer-motion';
+import { imageAnimation } from '../components/animations/animations';
 
 const Helpfulness = () => {
   const title = 'Чем мы можем быть полезны Вам?';
@@ -39,20 +41,33 @@ const Helpfulness = () => {
     },
   ];
 
-  const advantagesEl = helpfulness.map((item) => (
-    <Card item={item} key={item.title} size="80px" />
+  const advantagesEl = helpfulness.map((item, i) => (
+    <MCard
+      custom={i + 1}
+      variants={imageAnimation}
+      item={item}
+      key={item.title}
+      size="80px"
+    />
   ));
 
   return (
-    <div className="container mx-auto flex flex-wrap flex-col justify-center grow text-center py-16">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      className="container mx-auto flex flex-wrap flex-col justify-center grow text-center py-16">
       <h2 className="text-4xl py-3">{title}</h2>
       <div className="grid md:grid-cols-4 mt-6 gap-x-2 gap-y-8">
         {advantagesEl}
       </div>
-      <div className="flex flex-wrap justify-center mt-12">
+      <motion.div
+        custom={9}
+        variants={imageAnimation}
+        className="flex flex-wrap justify-center mt-12">
         <ButtonCallCom />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

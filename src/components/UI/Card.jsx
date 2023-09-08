@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 
-const Card = ({ item, size = '176px' }) => {
+export const Card = forwardRef(({ item, size = '176px' }, ref) => {
   return (
-    <div className="flex flex-wrap justify-center gap-y-2 self-start">
+    <div ref={ref} className="flex flex-wrap justify-center gap-y-2 self-start">
       <img
         className=""
         style={{ width: size, height: size }}
@@ -12,7 +14,9 @@ const Card = ({ item, size = '176px' }) => {
       <p className="font-bold text-xl w-full">{item.title}</p>
     </div>
   );
-};
+});
+
+Card.displayName = 'Card';
 
 Card.propTypes = {
   item: PropTypes.object,
@@ -20,3 +24,5 @@ Card.propTypes = {
 };
 
 export default Card;
+
+export const MCard = motion(Card);

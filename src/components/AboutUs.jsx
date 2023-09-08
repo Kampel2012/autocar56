@@ -1,5 +1,10 @@
 import ButtonCallCom from './UI/ButtonCallCom';
-import Card from './UI/Card';
+import { MCard } from './UI/Card';
+import { motion } from 'framer-motion';
+import {
+  imageAnimation,
+  textAnimation,
+} from '../components/animations/animations';
 
 const AboutUs = () => {
   const itemsForAboutUs = [
@@ -19,20 +24,37 @@ const AboutUs = () => {
 
   const title = 'СЛУЖБА АВАРИЙНЫХ КОМИССАРОВ В ОРЕНБУРГЕ';
 
-  const items = itemsForAboutUs.map((item) => (
-    <Card key={item.title} item={item} size="176px" />
+  const items = itemsForAboutUs.map((item, i) => (
+    <MCard
+      custom={i + 1}
+      variants={imageAnimation}
+      key={item.title}
+      item={item}
+      size="176px"
+    />
   ));
 
   return (
-    <div className="text-center container mx-auto flex flex-wrap flex-col justify-center grow">
-      <div className="sm:text-5xl text-3xl tracking-wider py-14">{title}</div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="text-center container mx-auto flex flex-wrap flex-col justify-center grow">
+      <motion.div
+        variants={textAnimation}
+        className="sm:text-5xl text-3xl tracking-wider py-14">
+        {title}
+      </motion.div>
       <div className="md:grid md:grid-cols-3 gap-y-5 mt-4 mx-auto grid">
         {items}
       </div>
-      <div className="flex flex-wrap justify-center mt-16 mb-16">
+      <motion.div
+        custom={4}
+        variants={imageAnimation}
+        className="flex flex-wrap justify-center mt-16 mb-16">
         <ButtonCallCom />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
