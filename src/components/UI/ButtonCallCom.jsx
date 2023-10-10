@@ -4,7 +4,6 @@ const ButtonCallCom = ({ text = 'ВЫЗВАТЬ КОМИССАРА' }) => {
   const phoneNumber = '97-90-50';
 
   const handleCallButtonClick = () => {
-    /* window.open(`tel:${phoneNumber}`); */
     window.location.href = `tel:${phoneNumber}`;
   };
 

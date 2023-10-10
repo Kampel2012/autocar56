@@ -1,6 +1,5 @@
 import Nav from './UI/Nav';
 import PropTypes from 'prop-types';
-/* import Logo from '../assets/logo.png'; */
 
 const Footer = ({ scrollToRef, myRef }) => {
   const year = new Date().getFullYear();

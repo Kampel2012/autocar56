@@ -8,7 +8,6 @@ import {
 } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
@@ -57,7 +56,6 @@ const Comments = () => {
     <div className="container mx-auto min-h-screen text-black flex flex-wrap justify-center">
       <h2 className="text-4xl py-3 self-end text-center">{titleComments}</h2>
       <Swiper
-        // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, Parallax]}
         spaceBetween={50}
         slidesPerView={1}
