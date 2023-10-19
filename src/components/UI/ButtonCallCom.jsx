@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const ButtonCallCom = ({ text = 'ВЫЗВАТЬ КОМИССАРА' }) => {
-  const phoneNumber = '97-90-50';
+  const phoneNumber = '+79878479050';
 
   const handleCallButtonClick = () => {
     window.location.href = `tel:${phoneNumber}`;
