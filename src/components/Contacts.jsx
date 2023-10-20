@@ -23,6 +23,9 @@ const Contacts = () => {
         тел. <span className="font-semibold">{contacts.phoneSecond}</span>
       </div>
       <div>
+        тел. <span className="font-semibold">{contacts.phoneThird}</span>
+      </div>
+      <div>
         E-mail: <span className="font-semibold">{contacts.email}</span>
       </div>
       <div>{contacts.discription}</div>
