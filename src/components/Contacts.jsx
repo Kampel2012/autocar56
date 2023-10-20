@@ -5,6 +5,7 @@ const Contacts = () => {
     adressDiscription: '(2 этаж вход с левого торца)',
     phoneFirst: '+ 7 (3532) 97-90-50',
     phoneSecond: '+ 7-987-847-90-50',
+    phoneThird: '+7-919-845-14-15',
     email: 'ruslan11dec@mail.ru',
     discription:
       'АВТОКОМ56 предлагает услугу выезда аварийных комиссаров на место ДТП в Оренбурге',
