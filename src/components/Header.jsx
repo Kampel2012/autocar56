@@ -13,6 +13,11 @@ const Header = ({ scrollToRef, myRef }) => {
     { name: 'Контакты', link: '' },
   ];
 
+  const phoneNumber = '+79878479050';
+  const handleCallButtonClick = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
   return (
     <div className="text-center bg-[#5B5B5B] bg-opacity-80 h-[70px] md:h-24 fixed w-full text-white">
       <div className="container mx-auto flex flex-wrap justify-between h-full items-center px-1 md:px-4">
@@ -24,7 +29,11 @@ const Header = ({ scrollToRef, myRef }) => {
         <div className="text-lg font-semibold gap-x-5 flex-wrap hidden md:flex">
           <Nav links={linksHeader} scrollToRef={scrollToRef} myRef={myRef} />
         </div>
-        <p className="self-center text-lg font-semibold">{headerPhone}</p>
+        <p
+          className="self-center text-lg font-semibold hover:cursor-pointer hover:opacity-70"
+          onClick={handleCallButtonClick}>
+          {headerPhone}
+        </p>
         <div className="md:hidden">
           <PositionedMenu
             linksHeader={linksHeader}
